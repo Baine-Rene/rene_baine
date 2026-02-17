@@ -4,9 +4,6 @@ import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 
 import Link from "next/link";
 
-import PostList from "@/app/blog/components/PostList";
-import ProjectList from "@/app/projects/components/ProjectList";
-
 
 export default function Home() {
   return (
@@ -68,7 +65,6 @@ export default function Home() {
             Check me out and subscribe to stay up to date.
           </p>
         </div>
-        <PostList posts={blogs} />
       </div>
     </div>
   );
