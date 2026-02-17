@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 // Theme Provider and vercel analytics
-import { ThemeProvider } from "./components/theme-provider";
+import { ThemeProvider } from "./components/ThemeProvider";
+import Navigation from "./components/Navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <Navigation />
             <div className="mx-auto max-w-175 px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
               {children}
             </div>
