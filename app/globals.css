@@ -10,8 +10,6 @@
 @import "@radix-ui/colors/blue-alpha.css";
 @import "@radix-ui/colors/blue-dark-alpha.css";
 
-@import "@/public/prism/one-dark.css";
-
 
 :root {
   --background: #ffffff;
