@@ -1,14 +1,26 @@
-import { div } from "motion/react-client";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
+
+import { allProjects } from "@/.contentlayer/generated";
+import { allBlogs } from "@/.contentlayer/generated";
+
 import ProjectList from "@/app/projects/components/ProjectList";
 
-
-import Link from "next/link";
+import Link from "@/app/components/Link";
+import PostList from "@/app/blog/components/PostList";
 
 import profile from "@/public/Profile.png";
 
 export default function Home() {
+  const blogs = allBlogs
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    // 3 most recent
+    .filter((_, i) => i < 3);
+
+  const projects = allProjects.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
+
   return (
     <div className="flex flex-col gap-16 md:gap-24">
       <div className="flex flex-col gap-8">
