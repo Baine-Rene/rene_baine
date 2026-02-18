@@ -18,9 +18,9 @@ import Greeting from "./components/Greeting";
 
 
 export const metadata: Metadata = {
-  title: "About | Brian Ruiz",
+  title: "About | Rene Baine",
   description:
-    "New York City based Software Engineer and a Content Creator, sharing insights on well-designed products and technology advancements.",
+    "",
 };
 
 export default async function About() {
