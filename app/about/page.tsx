@@ -31,12 +31,7 @@ export default async function About() {
         <h1 className="animate-in text-3xl font-bold tracking-tight text-primary">
           About
         </h1>
-        <p
-          className="animate-in text-secondary"
-          style={{ "--index": 1 } as React.CSSProperties}
-        >
-          A glimpse into me.
-        </p>
+
       </div>
       <div className="mb-8 md:hidden">
         <div
@@ -68,7 +63,7 @@ export default async function About() {
         </div>
       </div>
       <div className="hidden md:block">
-        <Gallery />
+
       </div>
       <div
         className="flex animate-in flex-col gap-16 md:gap-24"
@@ -77,30 +72,13 @@ export default async function About() {
         <Section heading="About" headingAlignment="left">
           <div className="flex flex-col gap-6">
             <p>
-              <Greeting /> I&apos;m Brian Ruiz! Originally from Honduras,
-              I&apos;m now based in the vibrant place that is New York City.
+              <Greeting /> I&apos;m Rene Baine Originally from Kampala Uganda, I&apos;m currently studying computer science at Trent University, Peterborough ON.
             </p>
             <p>
-              My curiosity for computers began at age 10, which naturally led me
-              to pursue a career in tech. I&apos;ve been working as a software
-              engineer, specializing in full-stack development and design, for{" "}
-              {new Date().getFullYear() - 2019} years now!
+              I&apos;m pursuing a Bachelor of Science (Honors) in Computer Science with a specialization in Software Engineering, driven by a passion for using technology to address real-world challenges. My areas of interest include mobile app development, sustainable tech innovation, and crafting user-centric digital experiences.
             </p>
             <p>
-              Alongside my coding journey, I run a{" "}
-              <Link
-                className="underline"
-                href="https://www.youtube.com/@brianruizy"
-              >
-                YouTube
-              </Link>{" "}
-              channel where I share insights on technology, productive coding
-              vlogs, and occasionally practice my filmmaking skills.{" "}
-            </p>
-            <p>
-              When I&apos;m not at my desk, you can find me at the gym, biking
-              around the city on my e-bike, or enjoying some coffee at a local
-              shop!
+               I&apos;ve worked on projects that helped non-profit organizations elevate their digital presence and connect with audiences through impactful, interactive content.
             </p>
           </div>
         </Section>
@@ -136,9 +114,7 @@ export default async function About() {
         <Section heading="Work" headingAlignment="left">
           <div className="flex w-full flex-col gap-8">
             <p>
-              I specialize in Python, data analytics, React, web development,
-              UI/UX, and product design. But I am always learning new things.
-              Here are some of the places I have worked.
+              Here's a few things I've worked on in recent years. I did alot of graphic design work. 
             </p>
             <Workplaces items={workplaces} />
           </div>
@@ -150,23 +126,23 @@ export default async function About() {
 
 const workplaces = [
   {
-    title: "Senior Software Engineer",
-    company: "Hines",
-    date: "2022 -",
+    title: "Co-Founder & Graphic Designer",
+    company: "IWIP",
+    date: "2025 -",
     imageSrc: hinesLogo,
     link: "https://hines.com",
   },
   {
-    title: "Jr. Software Engineer",
+    title: "Founder",
     company: "PeriShip",
     date: "2021 - 2022",
     imageSrc: perishipLogo,
     link: "https://peripharma.com/",
   },
   {
-    title: "Python Developer",
-    company: "CAMS",
-    date: "2019 - 2020",
+    title: "Graphic Designer",
+    company: "Young Eye Foundation",
+    date: "2013 - 2024",
     imageSrc: camsLogo,
     link: "https://camstex.com",
   },

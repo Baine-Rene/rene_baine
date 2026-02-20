@@ -19,7 +19,6 @@ const links = [
     path: "/blog",
     title: "Blog",
   },
-  
 ] as const;
 
 export default function Navigation() {
@@ -29,6 +28,16 @@ export default function Navigation() {
     <header className="md:mt-6">
       <nav className="mx-auto flex max-w-175 items-center justify-between gap-3 px-4 py-3 md:px-6">
         <Link href="/" className="hidden shrink-0 text-primary md:block">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 256 256"
+            fill="none"
+          >
+            <circle cx="128" cy="128" r="128" fill="currentColor" />
+            <circle cx="128" cy="128" r="62" fill="background" />
+          </svg>
         </Link>
 
         <div className="flex gap-1">
