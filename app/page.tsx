@@ -1,11 +1,7 @@
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
-
-import Link from "@/app/components/Link";
+import Link from "next/link";
 import profile from "@/public/Profile.png";
-
-// import PostList from "@/app/blog/components/PostList";
-// import ProjectList from "@/app/projects/components/ProjectList";
 
 export default function Home() {
   return (
@@ -19,7 +15,6 @@ export default function Home() {
           <p className="max-w-lg text-zinc-400">
             I&apos;m a second year computer science student at Trent University.
             I&apos;m currently working as a graphic designer at IWIP.
-            {/* Add link to iwip */}
           </p>
         </div>
         <div
@@ -38,15 +33,15 @@ export default function Home() {
           >
             Instagram
           </Link>
-
           <Link
-            className="flex w-fit items-center rounded-full bg-neutral-800 px-3 py-1 no-underline hover:bg-neutral-900"
             href=""
+            className="flex w-fit items-center rounded-full bg-neutral-800 px-3 py-1 no-underline hover:bg-neutral-900"
           >
             Twitter
           </Link>
         </div>
       </div>
+
       {/* Projects */}
       <div
         className="flex animate-in flex-col gap-8"
@@ -62,13 +57,16 @@ export default function Home() {
       >
         <div className="space-y-4">
           <Link
-            className="group flex items-center gap-2 tracking-tight font-semibold text-neutral-500"
+            className="group flex items-center gap-2 tracking-tight font-semibold text-neutral-500 no-underline"
             href="/blog"
           >
             Blog
             <ArrowUpRightIcon className="h-5 w-5 text-tertiary transition-all group-hover:text-primary" />
           </Link>
-          <p className="max-w-lg text-zinc-400 text-pretty"></p>
+          <p className="max-w-lg text-zinc-400 text-pretty">
+            I occasionally write about programming, productivity, and more.
+            I&apos;m trying to learn about more technology as I go.
+          </p>
         </div>
       </div>
     </div>
