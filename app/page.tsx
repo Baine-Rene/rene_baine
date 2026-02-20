@@ -14,7 +14,7 @@ export default function Home() {
           </h1>
           <p className="max-w-lg text-zinc-400">
             I&apos;m a second year computer science student at Trent University.
-            I&apos;m currently working as a graphic designer at IWIP.
+            I&apos;m currently working as a graphic designer at IWIP. Stay tunded.
           </p>
         </div>
         <div
