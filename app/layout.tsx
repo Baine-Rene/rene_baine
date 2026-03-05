@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Funnel_Display } from "next/font/google";
 import "./globals.css";
-
-// Theme Provider and vercel analytics
 import { ThemeProvider } from "./components/ThemeProvider";
 import Navigation from "./components/Navigation";
 
@@ -16,8 +14,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const funnelDisplay = Funnel_Display({
+  subsets: ["latin"],
+  variable: "--font-funnel-display", // removed the extra trailing --
+});
+
 export const metadata: Metadata = {
-  // metadataBase:new URL(""),
   title: "Rene Baine",
   description: "Second Year Computer Science student at Trent University.",
 };
@@ -29,7 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
+      <html
+        lang="en"
+        suppressHydrationWarning
+      >
+        {/* ↑ use curly braces, not quotes */}
         <body>
           <ThemeProvider
             attribute="class"

@@ -5,66 +5,26 @@ import Link from "@/app/components/Link";
 import Section from "@/app/components/Section";
 import ConnectLinks from "@/app/components/ConnectLinks";
 import Workplaces from "@/app/about/components/Workplaces";
-import Gallery from "@/app/about/components/Gallery";
 
-import hinesLogo from "@/public/work/hines-logo.jpeg";
-import perishipLogo from "@/public/work/periship-logo.jpeg";
-import camsLogo from "@/public/work/cams-logo.png";
-import uhdLogo from "@/public/work/uhd.png";
-
-import colorado from "@/public/gallery/colorado.jpg";
-import NYC from "@/public/gallery/nyc.jpg";
+import { Funnel_Display } from "next/font/google";
 import Greeting from "./components/Greeting";
-
 
 export const metadata: Metadata = {
   title: "About | Rene Baine",
-  description:
-    "",
+  description: "",
 };
 
-export default async function About() {
+const funnelDisplay = Funnel_Display({ subsets: ["latin"] });
 
+export default async function About() {
   return (
     <div className="flex flex-col gap-16 md:gap-24">
       <div>
-        <h1 className="animate-in text-3xl font-bold tracking-tight text-primary">
-          About
+        <h1 className={`${funnelDisplay.className} font-bold`}>
+          About Me
         </h1>
-
       </div>
-      <div className="mb-8 md:hidden">
-        <div
-          className="animate-in"
-          style={{ "--index": 1 } as React.CSSProperties}
-        >
-          <Image
-            src={NYC}
-            alt={"me and lily"}
-            width={324}
-            height={139}
-            className="pointer-events-none relative inset-0 h-52 w-60 -rotate-6 rounded-xl bg-neutral-400 object-cover object-right shadow-md"
-            priority
-          />
-        </div>
-
-        <div
-          className="animate-in"
-          style={{ "--index": 2 } as React.CSSProperties}
-        >
-          <Image
-            src={colorado}
-            alt={"Downtown New York"}
-            width={220}
-            height={260}
-            className="pointer-events-none absolute inset-0 -top-44 left-[40%] w-48 rotate-6 rounded-xl bg-neutral-400 object-cover shadow-md md:left-[60%] md:w-56"
-            priority
-          />
-        </div>
-      </div>
-      <div className="hidden md:block">
-
-      </div>
+      <div className="hidden md:block"></div>
       <div
         className="flex animate-in flex-col gap-16 md:gap-24"
         style={{ "--index": 3 } as React.CSSProperties}
@@ -72,13 +32,21 @@ export default async function About() {
         <Section heading="About" headingAlignment="left">
           <div className="flex flex-col gap-6">
             <p>
-              <Greeting /> I&apos;m Rene Baine Originally from Kampala Uganda, I&apos;m currently studying computer science at Trent University, Peterborough ON.
+              <Greeting /> I&apos;m Rene Baine Originally from Kampala Uganda,
+              I&apos;m currently studying computer science at Trent University,
+              Peterborough ON.
             </p>
             <p>
-              I&apos;m pursuing a Bachelor of Science (Honors) in Computer Science with a specialization in Software Engineering, driven by a passion for using technology to address real-world challenges. My areas of interest include mobile app development, sustainable tech innovation, and crafting user-centric digital experiences.
+              I&apos;m pursuing a Bachelor of Science (Honors) in Computer
+              Science with a specialization in Software Engineering, driven by a
+              passion for using technology to address real-world challenges. My
+              areas of interest include mobile app development, sustainable tech
+              innovation, and crafting user-centric digital experiences.
             </p>
             <p>
-               I&apos;ve worked on projects that helped non-profit organizations elevate their digital presence and connect with audiences through impactful, interactive content.
+              I&apos;ve worked on projects that helped non-profit organizations
+              elevate their digital presence and connect with audiences through
+              impactful, interactive content.
             </p>
           </div>
         </Section>
@@ -114,43 +82,12 @@ export default async function About() {
         <Section heading="Work" headingAlignment="left">
           <div className="flex w-full flex-col gap-8">
             <p>
-              Here's a few things I've worked on in recent years. I did alot of graphic design work. 
+              Here's a few things I've worked on in recent years. I did alot of
+              graphic design work.
             </p>
-            <Workplaces items={workplaces} />
           </div>
         </Section>
       </div>
     </div>
   );
 }
-
-const workplaces = [
-  {
-    title: "Co-Founder & Graphic Designer",
-    company: "IWIP",
-    date: "2025 -",
-    imageSrc: hinesLogo,
-    link: "https://hines.com",
-  },
-  {
-    title: "Founder",
-    company: "PeriShip",
-    date: "2021 - 2022",
-    imageSrc: perishipLogo,
-    link: "https://peripharma.com/",
-  },
-  {
-    title: "Graphic Designer",
-    company: "Young Eye Foundation",
-    date: "2013 - 2024",
-    imageSrc: camsLogo,
-    link: "https://camstex.com",
-  },
-  {
-    title: "Coding Camp Teacher",
-    company: "University of Houston",
-    date: "2019",
-    imageSrc: uhdLogo,
-    link: "https://www.uhd.edu/",
-  },
-];
